@@ -1,5 +1,5 @@
 {
-  "name": "evm-sample1",
+  "name": "evm-sample2",
   "version": "1.0.0",
   "description": "dairy repot project protetype",
   "main": "index.js",
@@ -10,7 +10,8 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "watch": "webpack --config webpack.config.js --watch",
-    "start": "npm run watch & http-server -o",
+    "start": "webpack-dev-server",
+    "startup": "npm run watch & http-server -o",
     "test": "webpack --config webpack.test.config.js --target node && mocha test/out/bundle.js"
   },
   "author": "Yasuhiro Gunji",
@@ -35,6 +36,7 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"

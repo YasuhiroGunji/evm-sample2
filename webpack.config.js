@@ -1,12 +1,15 @@
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    js: './src/index.js',
+    html: './src/index.html'
+  },
   output: {
     path: './out',
     filename: 'bundle.js'
   },
   devServer: {
     contentBase: 'out',
-    port: 1029,
+    port: 2000,
   },
   devtool: 'source-map',
   module: {

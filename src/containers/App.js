@@ -7,7 +7,7 @@ import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router';
 
 
-import default class App extends Component {
+export default class App extends Component {
 
   constructor(props) {
     super(props);
@@ -23,19 +23,18 @@ import default class App extends Component {
     return (
       <div>
         <AppBar
-          open={this.state.showMenu}
-          width={200}
-          onRequestChange={show => this.onMenuStateChange(true)}
+          title="evm-sampl2"
+          onLeftIconButtonTouchTap={() => this.onMenuStateChange(true)}
         />
         <Drawer
           docked={false}
           open={this.state.showMenu}
-          with={200}
-          onRequestChange={show => this.onMenuStateChange(show)}
+          width={200}
+          onRequestChange={(showMenu) => this.onMenuStateChange(showMenu)}
         >
-          <Link to="/"><MenuItem>Top</MenuItem></Link>
-          <Link to="/attendancce"><MenuItem>Attendancce</MenuItem></Link>
-          <Link to="/apply"><MenuItem>Apply</MenuItem></Link>
+          <Link to="/"><MenuItem onTouchTap={() => this.onMenuStateChange(false)}>Top</MenuItem></Link>
+          <Link to="/attendance"><MenuItem onTouchTap={() => this.onMenuStateChange(false)}>Attendancce</MenuItem></Link>
+          <Link to="/apply"><MenuItem onTouchTap={() => this.onMenuStateChange(false)}>Apply</MenuItem></Link>
         </Drawer>
 
         {this.props.children}
