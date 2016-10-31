@@ -13,12 +13,12 @@ const style = {
 
 const data = Datas;
 
-export default class List extends Component {
+export default class ApplyList extends Component {
 
   render() {
     return (
       <div>
-        <h2>list</h2>
+        <h2>applylist</h2>
           <ul>
             {data.map((d) => {
               return (

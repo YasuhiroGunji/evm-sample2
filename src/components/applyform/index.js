@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
-export default class Overwork extends Component {
+export default class ApplyForm extends Component {
 
   render() {
-    return (
+    return(
       <div>
-          <h2>overwork</h2>
+          <h2>form</h2>
       </div>
     )
   };
+
 }

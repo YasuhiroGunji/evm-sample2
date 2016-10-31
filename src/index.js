@@ -10,11 +10,14 @@ import Top from './containers/pages/top';
 import Attendance from './containers/pages/attendance';
 import Apply from './containers/pages/apply';
 
-import List from './components/list';
+import ApplyList from './components/applylist';
+import ApplyForm from './components/applyform';
 import Detail from './components/detail';
 import Overwork from './components/overwork';
 
 injectTapEventPlugin();
+
+import './reset.css';
 
 class Root extends Component {
   render() {
@@ -25,12 +28,8 @@ class Root extends Component {
             <IndexRoute component={Top} />
             <Route path="/attendance" component={Attendance} />
             <Route path="/apply" component={Apply}>
-              <IndexRoute component={Overwork} />
-              <Route path="/apply/overwork" component={Overwork}>
-                <IndexRoute component={List} />
-                <Route path="/apply/overwork/list" component={List} />
-                <Route path="/apply/overwork/detail" component={Detail} />
-              </Route>
+              <Route path="/apply/applylist" component={ApplyList} />
+              <Route path="/apply/applyform" component={ApplyForm} />
             </Route>
           </Route>
         </Router>

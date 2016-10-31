@@ -4,8 +4,19 @@ import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 
+import Paper from 'material-ui/Paper';
+
 import { Link } from 'react-router';
 
+import './style.styl';
+
+const style = {
+  height: 100,
+  width: 400,
+  margin: 10,
+  textAlign: 'center',
+  display: 'block',
+};
 
 export default class App extends Component {
 
@@ -21,7 +32,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="l_wrapper">
         <AppBar
           title="evm-sampl2"
           onLeftIconButtonTouchTap={() => this.onMenuStateChange(true)}
@@ -36,9 +47,23 @@ export default class App extends Component {
           <Link to="/attendance"><MenuItem onTouchTap={() => this.onMenuStateChange(false)}>Attendancce</MenuItem></Link>
           <Link to="/apply"><MenuItem onTouchTap={() => this.onMenuStateChange(false)}>Apply</MenuItem></Link>
         </Drawer>
-
-        {this.props.children}
+        <div className="l_wrapper_content">
+          <ul>
+              <li>
+                <Paper style={style} zDepth={3}>
+                  <div>
+                  </div>
+                  <div>
+                  </div>
+                </Paper>
+              </li>
+          </ul>
+        </div>
       </div>
     )
   };
 }
+
+
+
+// {this.props.children}
