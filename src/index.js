@@ -22,7 +22,7 @@ class Root extends Component {
       <MuiThemeProvider>
         <Router history={hashHistory}>
           <Route path="/" component={App}>
-          <IndexRoute component={Top} />
+            <IndexRoute component={Top} />
             <Route path="/attendance" component={Attendance} />
             <Route path="/apply" component={Apply}>
               <IndexRoute component={Overwork} />
