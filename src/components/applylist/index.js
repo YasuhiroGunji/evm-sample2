@@ -5,7 +5,7 @@ import Datas from './data';
 
 const style = {
   height: 100,
-  width: 300,
+  width: 400,
   margin: 10,
   textAlign: 'center',
   display: 'block',

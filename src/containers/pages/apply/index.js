@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Overwork from '../../components/overwork'
+import ApplyList from '../../components/applylist'
 
 export default class Apply extends Component {
 
@@ -8,7 +8,7 @@ export default class Apply extends Component {
     return (
       <div>
           <h2>Apply</h2>
-          <Overwork />
+          <ApplyList />
       </div>
     )
   };
